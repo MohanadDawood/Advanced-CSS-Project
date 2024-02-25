@@ -83,10 +83,6 @@ body {
   font-size: 1.6rem;
 }
 
-/* title{
-
-} */
-
 .container {
   display: grid;
   row-gap: 11rem;
@@ -95,9 +91,37 @@ body {
   padding-inline: var(--gutter);
 }
 
+/* GLOBAL STYLES */
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: start;
+}
+
+.section__with-bg::after {
+  content: "";
+  background-color: var(--color-grey);
+  display: flex;
+  width: 100vw;
+  height: 55rem;
+  left: 0;
+  z-index: -2;
+  position: absolute;
+}
+
+.h2-heading {
+  grid-column: 1/-1;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+  font-size: 6.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+/* END GLOBAL STYLES */
+
 .header {
   display: flex;
-  /* justify-content: space-between; */
   padding: 3rem 0;
   position: relative;
   justify-content: center;
@@ -187,21 +211,15 @@ h2 {
 
 /* End Toggle */
 
-/* global style for all sections */
-.section {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  align-items: start;
-  gap: 20rem;
-  /* margin-top: 10rem; */
-}
-
+/* Bio */
 .bio {
 }
 
 .bio__info {
   display: grid;
   gap: 50px;
+  justify-items: start;
+  margin-right: 20rem;
 }
 
 .bio__heading {
@@ -306,8 +324,46 @@ h2 {
   width: 42.7rem;
 }
 
-/* dark mode */
+/* End Bio */
 
-/* .toggle__checkbox:checked + .container {
-  background-color: var(--color-black);
-} */
+/* Skills */
+
+.skills::after {
+  content: "";
+  background-color: var(--color-grey);
+  display: flex;
+  width: 100%;
+  height: 55rem;
+  left: 0;
+  z-index: -2;
+  position: absolute;
+}
+
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  row-gap: 5rem;
+  column-gap: 25rem;
+  margin-top: 5rem;
+}
+
+.skills__list-element {
+  transition: var(--transition-timing);
+}
+
+.skills__list-element:hover {
+  text-shadow: 0px 0px 2px var(--color-green);
+  user-select: none;
+}
+
+.skills__tech {
+  font-size: 3.8rem;
+  font-weight: var(--font-weight-semi-bold);
+  margin-bottom: 1rem;
+}
+
+.skills__experience {
+  font-size: 2rem;
+}
+
+/* END Skills */
