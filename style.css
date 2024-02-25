@@ -91,12 +91,23 @@ body {
   padding-inline: var(--gutter);
 }
 
+.video-loop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.08;
+  z-index: -2;
+}
+
 /* GLOBAL STYLES */
 
 .section {
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: start;
+  margin-bottom: 11rem;
 }
 
 .section__with-bg::after {
@@ -367,3 +378,11 @@ h2 {
 }
 
 /* END Skills */
+
+/* Media */
+
+.media__video {
+  max-width: 100%;
+}
+
+/* END Media */
