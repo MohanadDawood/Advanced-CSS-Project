@@ -123,7 +123,7 @@
           />
         </div>
         <div class="projects__quran-tab-project">
-          <h3 class="projects__h3-heading">
+          <h3 class="h3-heading">
             Quran Tab <br />
             Extension
           </h3>
@@ -140,7 +140,7 @@
           </div>
         </div>
         <div class="projects__quran-station-project">
-          <h3 class="projects__h3-heading">
+          <h3 class="h3-heading">
             Quran Station <br />
             Extension
           </h3>
@@ -206,13 +206,28 @@
             Feel free to reach out to me any time. I prefer to talk over email,
             especially since we may be a few time zones away.
           </p>
-          <a href="mailto:example@gmail.com">example@gmail.com</a>
-          <div class="contact-us__info-icons">
-            <span class="contact-us-icon"></span>
-            <span class="contact-us-icon"></span>
-            <span class="contact-us-icon"></span>
-            <span class="contact-us-icon"></span>
-            <span class="contact-us-icon"></span>
+          <a class="contact-us__info-email" href="mailto:example@gmail.com"
+            >example@gmail.com</a
+          >
+          <div class="contact-us-info__socials">
+            <a href="#" class="contact-us-info-social"
+              ><img src="images/brand/facebook.svg" alt="icon of facebook"
+            /></a>
+            <a href="#" class="contact-us-info-social"
+              ><img src="images/brand/twitter.svg" alt="icon of twitter"
+            /></a>
+            <a href="#" class="contact-us-info-social"
+              ><img src="images/brand/youtube.svg" alt="icon of youtube"
+            /></a>
+            <a href="#" class="contact-us-info-social"
+              ><img src="images/brand/github.svg" alt="icon of github"
+            /></a>
+            <a href="#" class="contact-us-info-social"
+              ><img src="images/brand/instagram.svg" alt="icon of instagram"
+            /></a>
+            <a href="#" class="contact-us-info-social"
+              ><img src="images/brand/LinkedIn.svg" alt="icon of linkedin"
+            /></a>
           </div>
         </div>
 
@@ -220,33 +235,42 @@
           <div class="contact-us__form-info">
             <h2 class="h2-heading">LET’S WORK <br />TOGETHER!</h2>
             <div class="inputs">
-              <input
-                type="text"
-                id="input-name"
-                class="input-name"
-                placeholder="Full Name"
-              />
-              <label for="input-name" class="name-label"></label>
-              <input
-                type="tel"
-                id="input-phone"
-                class="input-phone"
-                placeholder="Phone No."
-              />
-              <label for="input-phone" class="phone-label"></label>
-
+              <div class="inputs_info">
+                <input
+                  type="text"
+                  id="input-name"
+                  class="input-name"
+                  placeholder="Full Name"
+                />
+                <label for="input-name" class="name-label"></label>
+                <input
+                  type="tel"
+                  id="input-phone"
+                  class="input-phone"
+                  placeholder="Phone No."
+                />
+                <label for="input-phone" class="phone-label"></label>
+              </div>
               <textarea
                 name=""
                 id="input-message"
                 cols="50"
                 rows="1"
+                placeholder="Your Message"
               ></textarea>
               <label for="input-message" class="message-label"></label>
             </div>
+          </div>
+          <div class="send-message-container">
             <button class="contact-us__send-message">Send Message</button>
           </div>
         </div>
       </section>
+
+      <footer id="footer" class="footer">
+        <hr />
+        <p>&#169 2022 by Mohamed Abusrea</p>
+      </footer>
     </div>
   </body>
 </html>
