@@ -105,7 +105,7 @@ body {
 .section {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  margin-bottom: 11rem;
+  margin-top: 11rem;
 }
 
 .section__with-bg::after {
@@ -127,6 +127,11 @@ body {
   font-weight: var(--font-weight-bold);
 }
 
+.projects__h3-heading {
+  font-size: var(--font-size-38);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 3.5rem;
+}
 /* END GLOBAL STYLES */
 
 .header {
@@ -314,6 +319,7 @@ h2 {
 
 .bio__pic-container {
   position: relative;
+  align-self: end;
 }
 
 .bio__pic-container::after {
@@ -381,6 +387,7 @@ h2 {
 
 .media__video {
   max-width: 100%;
+  margin-top: 11rem;
 }
 
 /* END Media */
@@ -389,35 +396,61 @@ h2 {
 
 .projects {
   column-gap: 8rem;
+  row-gap: 9rem;
 }
 
-.projects__quran-project {
+#projects .h2-heading {
+  margin-top: 0;
+}
+
+.projects__quran-tab-project {
   align-self: center;
 }
 
 .projects__img {
-  width: 55rem;
-}
-#projects .h2-heading {
-  margin-top: 0;
-  margin-bottom: 10rem;
-}
-.projects__h2-heading {
-  font-size: 3.8rem;
-  font-weight: var(--font-weight-bold);
-  margin-bottom: 3.5rem;
+  max-width: 100%;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 }
 
-.projects__quran-project__link {
+.projects__quran-tab-project-description {
+  line-height: 1.5;
+}
+
+.projects__quran-tab-project__link {
   display: flex;
   gap: 3rem;
   justify-content: start;
   margin-top: 3.5rem;
-}
-
-.projects__quran-project__link {
   color: var(--color-darker-blue);
+  font-family: var(--font-family-poppins);
   font-weight: var(--font-weight-medium);
 }
 
+.projects__quran-station-project {
+  align-self: center;
+}
+
+.projects__quran-station-project__link {
+  display: flex;
+  gap: 3rem;
+  justify-content: start;
+  margin-top: 3.5rem;
+  color: var(--color-darker-blue);
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-medium);
+}
+
+.projects__link::after {
+  content: "";
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url(images/external-icon.png);
+  background-size: contain;
+  margin-left: 0.6rem;
+}
+
+.projects__quran-station-project-description {
+  line-height: 1.5;
+}
 /* END projects */
