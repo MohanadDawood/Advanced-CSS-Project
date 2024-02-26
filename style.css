@@ -85,7 +85,6 @@ body {
 
 .container {
   display: grid;
-  row-gap: 11rem;
   margin: 0 auto;
   max-width: calc(var(--container-width) + calc(var(--gutter) * 2));
   padding-inline: var(--gutter);
@@ -106,7 +105,6 @@ body {
 .section {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  align-items: start;
   margin-bottom: 11rem;
 }
 
@@ -386,3 +384,40 @@ h2 {
 }
 
 /* END Media */
+
+/* Projects */
+
+.projects {
+  column-gap: 8rem;
+}
+
+.projects__quran-project {
+  align-self: center;
+}
+
+.projects__img {
+  width: 55rem;
+}
+#projects .h2-heading {
+  margin-top: 0;
+  margin-bottom: 10rem;
+}
+.projects__h2-heading {
+  font-size: 3.8rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 3.5rem;
+}
+
+.projects__quran-project__link {
+  display: flex;
+  gap: 3rem;
+  justify-content: start;
+  margin-top: 3.5rem;
+}
+
+.projects__quran-project__link {
+  color: var(--color-darker-blue);
+  font-weight: var(--font-weight-medium);
+}
+
+/* END projetcs */
