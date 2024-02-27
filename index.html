@@ -22,12 +22,12 @@
       <header class="header">
         <nav class="navigation">
           <ol class="navigation__list">
-            <li><a href="#" class="navigation__link">Bio</a></li>
-            <li><a href="#" class="navigation__link">Skills</a></li>
-            <li><a href="#" class="navigation__link">Media</a></li>
-            <li><a href="#" class="navigation__link">Projects</a></li>
-            <li><a href="#" class="navigation__link">My Clients</a></li>
-            <li><a href="#" class="navigation__link">Contact</a></li>
+            <li><a href="#bio" class="navigation__link  navigation__bio">Bio</a></li>
+            <li><a href="#skills" class="navigation__link navigation__skills">Skills</a></li>
+            <li><a href="#media" class="navigation__link navigation__media">Media</a></li>
+            <li><a href="#projects" class="navigation__link navigation__projects">Projects</a></li>
+            <li><a href="#clients" class="navigation__link navigation__clients">My Clients</a></li>
+            <li><a href="#contact-us" class="navigation__link navigation__contact-us">Contact</a></li>
           </ol>
         </nav>
         <div class="toggle">
@@ -57,8 +57,8 @@
             <a class="bio__youtube" href="www.youtube.com">Youtube</a>.
           </p>
           <div class="bio__moreinfo">
-            <a class="bio__links say-hi-link" href="#">Say Hi</a>
-            <a class="bio__links find-out-link" href="#"
+            <a class="bio__links say-hi-link" href="#contact-us">Say Hi</a>
+            <a class="bio__links find-out-link" href="/mohamedAbusreaResume.pdf"
               >Download CV <span class="bio__arrow">↓</span></a
             >
           </div>
@@ -166,7 +166,7 @@
           />
         </div>
       </section>
-      <section id="clients" class="clients section">
+      <section id="clients" class="clients section section__with-bg">
         <h2 class="h2-heading">
           WHAT MY <br />
           CLIENTS SAYS.
@@ -232,8 +232,8 @@
         </div>
 
         <div class="contact-us__form-container">
-          <div class="contact-us__form-info">
-            <h2 class="h2-heading">LET’S WORK <br />TOGETHER!</h2>
+          <h2 class="h2-heading">LET’S WORK <br />TOGETHER!</h2>
+          <form action="results.html">
             <div class="inputs">
               <div class="inputs_info">
                 <input
@@ -241,15 +241,16 @@
                   id="input-name"
                   class="input-name"
                   placeholder="Full Name"
+                  required
                 />
-                <label for="input-name" class="name-label"></label>
                 <input
                   type="tel"
                   id="input-phone"
                   class="input-phone"
                   placeholder="Phone No."
-                />
-                <label for="input-phone" class="phone-label"></label>
+                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                  required
+                /> 
               </div>
               <textarea
                 name=""
@@ -257,13 +258,14 @@
                 cols="50"
                 rows="1"
                 placeholder="Your Message"
+                required
               ></textarea>
-              <label for="input-message" class="message-label"></label>
             </div>
-          </div>
-          <div class="send-message-container">
-            <button class="contact-us__send-message">Send Message</button>
-          </div>
+          
+       
+            <input type="submit" class="contact-us__send-message" value="Send Message" ></input>
+          
+          </form>   
         </div>
       </section>
 

@@ -74,6 +74,8 @@ ol {
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
 }
 
 body {
@@ -81,6 +83,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-size: 1.6rem;
+  position: relative;
 }
 
 .container {
@@ -113,7 +116,7 @@ body {
   background-color: var(--color-grey);
   display: flex;
   width: 100vw;
-  height: 55rem;
+  height: 85rem;
   left: 0;
   z-index: -2;
   position: absolute;
@@ -138,8 +141,12 @@ body {
 .header {
   display: flex;
   padding: 3rem 0;
-  position: relative;
+  /* position: relative; */
   justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-background);
+  z-index: 100;
 }
 
 .navigation__list {
@@ -160,8 +167,19 @@ body {
   color: var(--color-text);
 }
 
-h2 {
+.navigation__link h2 {
   font-size: 1.5rem;
+}
+
+.container:has(#bio:target) .navigation__bio,
+.container:has(#skills:target) .navigation__skills,
+.container:has(#media:target) .navigation__media,
+.container:has(#projects:target) .navigation__projects,
+.container:has(#clients:target) .navigation__clients,
+.container:has(#contact-us:target) .navigation__contact-us {
+  color: var(--color-blue);
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
 }
 
 .header::before {
@@ -172,6 +190,8 @@ h2 {
   border-bottom: 0.1rem solid var(--color-input-border);
   top: 0;
   z-index: -1;
+  background-color: var(--color-background);
+  height: 100%;
   /* leeh edenah el before hna wa5ed position absolute fa hayezhar foo2 el content fa law gena no2af 3al links mesh hanla2y el hover sha3'al */
 }
 
@@ -197,7 +217,7 @@ h2 {
   position: relative;
   width: 4.5rem;
   height: 2.2rem;
-  background-color: black;
+  background-color: var(--color-link-bg);
   border-radius: 1.5rem;
   padding: 0.3rem 0.4rem;
   cursor: pointer;
@@ -287,10 +307,10 @@ h2 {
   text-decoration: none;
 }
 
-.say-hi-link {
+.bio .say-hi-link {
   padding: 1rem 5rem;
   color: var(--color-white);
-  background-color: var(--color-black);
+  background-color: var(--color-link-bg);
 }
 
 .find-out-link {
@@ -331,7 +351,7 @@ h2 {
   bottom: 4px;
   position: absolute;
   box-shadow: 2.17543px 8.7017px 38.0699px rgba(0, 0, 0, 0.15);
-  background-color: black;
+  background-color: var(--color-link-bg);
   border-radius: 2.5rem;
   z-index: -1;
 }
@@ -483,6 +503,7 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   column-gap: 20rem;
+  margin-top: 20rem;
 }
 
 #contact-us h2 {
@@ -515,6 +536,7 @@ h2 {
 
 .inputs {
   margin-bottom: 3rem;
+  margin-top: 7rem;
 }
 
 .inputs_info {
@@ -525,21 +547,25 @@ h2 {
 
 .input-name {
   border: 0px;
-  border-bottom: 1px solid black;
+  outline: 0;
+  /* outline b 0 3ashan ne3mel remove lel focus border */
+  border-bottom: 1px solid var(--color-input-border);
   background-color: transparent;
   width: 45%;
 }
 
 .input-phone {
   border: 0px;
-  border-bottom: 1px solid black;
+  outline: 0;
+  border-bottom: 1px solid var(--color-input-border);
   background-color: transparent;
   width: 45%;
 }
 
 #input-message {
   border: 0px;
-  border-bottom: 1px solid black;
+  outline: 0;
+  border-bottom: 1px solid var(--color-input-border);
   background-color: transparent;
   width: 100%;
 }
@@ -552,11 +578,11 @@ h2 {
 .contact-us__send-message {
   font-size: 25px;
   padding: 1.7rem;
-  background-color: #000;
+  background-color: var(--color-link-bg);
   color: var(--color-white);
 }
 
-.send-message-container::after {
+form:invalid::after {
   content: "*";
   font-size: 4rem;
   position: absolute;
@@ -573,3 +599,15 @@ hr {
   color: #000;
 }
 /* End Contact us */
+
+/* Dark theme */
+
+html:has(.toggle__checkbox:checked) {
+  --color-background: var(--color-black);
+  --color-text: var(--color-white);
+  --color-box-img: var(--color-green);
+  --color-link-bg: var(--color-green);
+  --color-grey: #080808;
+  --color-input-border: var(--color-white);
+}
+/* END Dark theme */
