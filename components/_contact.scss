@@ -1,0 +1,91 @@
+@import "./mixins.scss";
+
+.contact-us {
+  @include twocolumns($column-gap: 20rem, $row-gap: 0);
+  align-items: center;
+}
+
+#contact-us h2 {
+  margin: 0;
+}
+
+.contact-us__info-description {
+  font-size: var(--font-size-20);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.contact-us__info-email {
+  margin-bottom: 2.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.contact-us-info-social {
+  transition: var(--transition-timing);
+}
+
+.contact-us-info-social:hover {
+  transform: scale(1.2);
+}
+
+.contact-us__form-info {
+  display: grid;
+  row-gap: 10rem;
+}
+
+.inputs {
+  margin-bottom: 3rem;
+  margin-top: 7rem;
+}
+
+.inputs_info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.input-name {
+  border: 0px;
+  outline: 0;
+  /* outline b 0 3ashan ne3mel remove lel focus border */
+  border-bottom: 1px solid var(--color-input-border);
+  background-color: transparent;
+  width: 45%;
+}
+
+.input-phone {
+  border: 0px;
+  outline: 0;
+  border-bottom: 1px solid var(--color-input-border);
+  background-color: transparent;
+  width: 45%;
+}
+
+#input-message {
+  border: 0px;
+  outline: 0;
+  border-bottom: 1px solid var(--color-input-border);
+  background-color: transparent;
+  width: 100%;
+}
+
+.send-message-container {
+  width: 30rem;
+  position: relative;
+}
+
+.contact-us__send-message {
+  font-size: 25px;
+  padding: 1.7rem;
+  background-color: var(--color-link-bg);
+  color: var(--color-white);
+}
+
+form:invalid::after {
+  content: "*";
+  font-size: 4rem;
+  position: absolute;
+  color: var(--color-red);
+  margin-top: 5px;
+  margin-left: 2px;
+}

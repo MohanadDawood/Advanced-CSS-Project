@@ -1,0 +1,106 @@
+.header {
+  display: flex;
+  padding: 3rem 0;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-background);
+  z-index: 100;
+}
+
+.burger__menu-checkbox {
+  display: none;
+}
+
+.navigation__list {
+  font-size: 1.6rem;
+  display: flex;
+  gap: 2rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+  text-decoration: none;
+}
+
+.navigation__link:hover,
+.navigation__link:active {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+
+.navigation__link h2 {
+  font-size: 1.5rem;
+}
+
+.container:has(#bio:target) .navigation__bio,
+.container:has(#skills:target) .navigation__skills,
+.container:has(#media:target) .navigation__media,
+.container:has(#projects:target) .navigation__projects,
+.container:has(#clients:target) .navigation__clients,
+.container:has(#contact-us:target) .navigation__contact-us {
+  color: var(--color-blue);
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+
+.header::before {
+  content: "";
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  top: 0;
+  z-index: -1;
+  background-color: var(--color-background);
+  height: 100%;
+  /* leeh edenah el before hna wa5ed position absolute fa hayezhar foo2 el content fa law gena no2af 3al links mesh hanla2y el hover sha3'al */
+}
+
+.toggle {
+  display: flex;
+  margin-left: auto;
+  gap: 1rem;
+}
+
+.toggle__title {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-18);
+}
+
+.toggle__checkbox {
+  display: none;
+}
+
+.toggle__label {
+  display: block;
+  position: relative;
+  width: 4.5rem;
+  height: 2.2rem;
+  background-color: var(--color-link-bg);
+  border-radius: 1.5rem;
+  padding: 0.3rem 0.4rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  transition: 0.3s;
+}
+
+.toggle__checkbox:checked + .toggle__label {
+  background-color: var(--color-text);
+}
+
+.toggle__checkbox:checked + .toggle__label::after {
+  background-color: var(--color-green);
+  transform: translateX(2.1rem);
+}
