@@ -16,6 +16,7 @@ body {
   margin: 0 auto;
   max-width: calc(var(--container-width) + calc(var(--gutter) * 2));
   padding-inline: var(--gutter);
+  row-gap: 10rem;
 }
 
 .video-loop {
