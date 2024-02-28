@@ -54,9 +54,18 @@
 }
 
 @media (max-width: 500px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .img2 {
+    grid-row: 4;
+  }
+
   .bio__pic {
     width: 100%;
   }
+
   .header {
     padding: 0;
   }
